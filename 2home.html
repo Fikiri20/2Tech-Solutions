@@ -1,0 +1,643 @@
+<DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Home.html</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <style>
+    * {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      text-decoration: none;
+    }
+    
+      body {
+      background-image: linear-gradient(rgba(0, 0, 0, 1.25), rgba(0, 0, 0, 0.1)), url(https://raw.githubusercontent.com/8-TECH/8TECH-/main/4nbg.jpeg);
+      width: 100%;
+      height: 100vh;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+
+    .navb {
+      position: sticky;
+      top: 0;
+    }
+    .navb {
+      width: 100%;
+      height: 60px;
+      background: orange;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    
+    .navb a{
+    margin-left:10px;
+    color:#fff;
+    text-transform:uppercase;
+    position:relative;
+    font-family:serif;
+  }
+   a::after{
+    content:'';
+    width:0%;
+    height:1.7px;
+    background:#00FFEF;
+    transition:.5s;
+    left:0;
+    position:absolute;
+     top:18px;
+  }
+ .navb a:hover::after{
+    width:100%;
+  }
+
+    .logo {
+      color: #000;
+      font-family: Serif;
+      font-weight: 700;
+      margin-left: 30px;
+      font-size:18px;
+      margin-left:10px;
+    }
+
+    ul {
+      float: right;
+    }
+
+    .navb li {
+      display: inline-block;
+      margin: 0 5px;
+    }
+
+    .navb li a {
+      border-radius: 8px;
+      color: #000;
+      padding: 0 2px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+
+    .menu-btn {
+      display: none; /* Initially hide the menu button for larger screens */
+      cursor: pointer;
+      margin:10px;
+    }
+
+    .menu-img {
+      width: 25px; /* Set the width of the menu image */
+    }menu-btn {
+      display: none; /* Initially hide the menu button for larger screens */
+      cursor: pointer;
+      
+    }
+    
+        .checkbtn {
+      display: none;
+      color: #fff;
+      float: right;
+      line-height: 8px;
+      margin-right: 15px;
+      cursor: pointer;
+    }
+
+    #check {
+      display: none;
+    }
+    
+    @media (max-width: 1024px) {
+      .menu-btn {
+        display: block; /* Show the menu button for smaller screens */
+      }
+
+      .checkbtn {
+        display: block;
+      }
+
+      #check:checked ~ ul {
+        left: 0;
+      }
+    }
+
+
+    @media (max-width:1024px) {
+      label.logo {
+        font-size: 15px;
+        padding: 10px;
+      }
+
+      nav ul li a {
+        font-size: 15px;
+      }
+
+      ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: orange;
+        top:60px;
+        left: -100%;
+        text-align: center;
+        transition: all 0.5s;
+      }
+
+      .navb ul li {
+        display: block;
+        margin: 30px 0;
+        line-height: 30px;
+      }
+
+      nav ul li a {
+        font-size: 15px;
+      }
+
+    .cont1 img {
+     max-width:60vw;
+    }
+        
+    .search-container {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      justify-content:center;
+      max-width:90vw;
+      margin-top:70px;
+    }
+     
+    #searchInput {
+      
+      padding: 8px;
+      border: none;
+      border-radius: 4px;
+      width:90%;
+      color: #333;
+      margin-right:10px;
+      font-size:18px;
+    }
+
+    #searchButton {
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      padding: 8px;
+      cursor: pointer;
+       font-size:18px;
+    }
+
+    #searchButton:hover {
+      background-color: #2980b9;
+    }
+
+    #searchResults {
+      margin-top: 10px;
+      color: #27ae60;
+    }
+
+    #notFoundMessage {
+      margin-top: 10px;
+      color: #e74c3c;
+    }
+
+    .search-result-item {
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      background:#fff;
+    }
+
+    .result-image {
+     max-width:50%; /* Adjust the image width as needed */
+      height: auto;
+      margin-right: 10px;
+    } 
+
+    img {
+     max-width:90%;
+      height: auto;
+    }
+    
+.mySlides {
+  display: inline-block;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: slide 10s linear infinite;
+  margin-top:30px;
+  z-index:-100;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(100%);
+  }
+  25% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+  
+.mySlides img {
+  width: 100%;
+  margin-right: 10px;
+  border-radius:10px;
+ 
+}
+
+.slideshow-container {
+  overflow: hidden;
+  
+}
+      
+
+
+
+      
+     
+
+    footer {
+      text-align: center;
+      color: #fff;
+      background: #333;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  
+  .phm img{
+  border-radius:10px;
+  width:58vw;
+  margin:10px;
+  float:right;
+  
+}
+.phm img:hover{
+  border:1px solid #0ef;
+}
+.phm button{
+  width:32%;
+  border-radius:10px;
+  margin:5px;
+  transition:all 0.5s;
+  background:black;
+  color:#fff;
+  font-weight:bold;
+  font-family:serif;
+  font-size:13px;
+  height:35px;
+  
+}
+.phm button:hover{
+  background:blue;
+}
+  .phm{
+    margin:4vh 0;
+    line-height:5vh;
+  }
+    .collection{
+      display:flex;
+    
+      }
+      .collection img{
+        width:45vw;
+        border-radius:10px;
+      }
+    .col,.coll{
+      flex-basis:50%;
+      margin:5px;
+      padding:0px;
+    }
+    
+    .social-media{
+      margin:30px;
+    color:#fff;
+  }
+    .social-media a{
+      margin-left:20px;
+    }
+    h3{
+      margin-top:30px;
+      font-family:serif;
+      color:#fff;
+    }
+    
+    .contact img{
+      width:100vw;  
+    }
+    .sticky-header {
+    background-color:orange;
+    padding: 5px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    font-family:serif;
+}
+
+  </style>
+
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<body>
+<header class="sticky-header">
+<nav class="navb">
+  <div class="logo">2TECH SOLUTIONS</div>
+  <div class="menu-btn" onclick="toggleMenu()">
+    <img src="https://raw.githubusercontent.com/8-TECH/8TECH-/main/menu.png" alt="Menu Button" class="menu-img">
+  </div>
+  <input type="checkbox" id="check" onclick="toggleMenu()">
+ 
+
+  <ul>
+    
+    <li><a href="2mcs.html" class="active">Mathematics and Computer Science</a></li>
+    <li><a href="#">Statistics and Programming</a></li>
+    <li><a href="#">Actuarial Science</a></li>
+    
+  </ul>
+</nav>
+  </header>
+<center> 
+  <div class="search-container">
+  <input type="text" id="searchInput" placeholder="Type your search here">
+  <button id="searchButton" onclick="searchItem()">Search</button>
+  </div>
+  </center>
+  <center>
+    
+<div id="searchResults"></div>
+<div id="notFoundMessage"></div>
+
+<div>
+  <img src="https://example.com/path/to/your/default-image.jpg" alt="Default Image" id="defaultImage" style="display: none;">
+</div>
+
+</center>
+  
+  <div class="cont1">
+    <center>
+      <img src="https://raw.githubusercontent.com/8-TECH/8TECH-/main/2techlogo.png">
+    </center>
+    </div>
+    <center>
+    <div class="slideshow-container">
+      <div class="mySlides">
+        <img src="https://raw.githubusercontent.com/8-TECH/8-TECH/main/2techg.png">
+      </div>
+
+      <div class="mySlides">
+        <img src="https://raw.githubusercontent.com/8-TECH/8-TECH/main/2techd.jpeg">
+      </div>
+
+      <div class="mySlides">
+        <img src="https://raw.githubusercontent.com/8-TECH/8-TECH/main/2techf.png">
+      </div>
+      
+     <div class="mySlides">
+        <img src="https://raw.githubusercontent.com/8-TECH/8-TECH/main/2techb.png">
+      </div>
+      
+      <div class="mySlides">
+        <img src="https://raw.githubusercontent.com/8-TECH/8-TECH/main/2teche.png">
+      </div>
+      
+      <div class="mySlides">
+        <img src="https://raw.githubusercontent.com/8-TECH/8-TECH/main/2techc.png">
+      </div>
+      
+        <div class="mySlides">
+        <img src="https://raw.githubusercontent.com/8-TECH/8-TECH/main/2techa.png">
+      </div>
+
+         
+    </div>
+  </center>
+  <br>
+  <div class="phm">
+    <div>
+  <img src="https://raw.githubusercontent.com/8-TECH/8-TECH/main/Sem2.jpeg" class="responsive" id="image">
+  <div>
+ 		<button  onclick="changeImage()">DEADLINES</button>
+  </div>
+  
+   <div>
+ 		<button  onclick="changeImg()">CATS</button>
+  </div>
+
+   <div>
+ 		<button  onclick="changeIm()">EXAMINATION</button>
+  </div>
+  
+   <div>
+ 		<button  onclick="changeI()">2TECH</button>
+  </div>
+
+  <div>
+ 		<button  onclick="changeIg()">OUR SERVICES</button>
+  </div>
+    </div>
+  </div>
+  
+  
+  <center>
+    <div class="collection">
+      <div class="coll">
+        <img src="https://raw.githubusercontent.com/8-TECH/8-TECH/main/2tech6.png" class="responsive" id="image">
+      </div>
+      
+      <div class="col">
+        <img src=" https://raw.githubusercontent.com/8-TECH/8-TECH/main/2tech5.jpeg" class="responsive" id="image">
+      </div>
+    </div>
+  </center>
+  <center>
+    <div class="collection">
+      <div class="coll">
+        <img src="https://raw.githubusercontent.com/8-TECH/8-TECH/main/2tech4.png" class="responsive" id="image">
+      </div>
+      
+      <div class="col">
+        <img src="https://raw.githubusercontent.com/8-TECH/8-TECH/main/2tech3.jpeg" class="responsive" id="image">
+      </div>
+    </div>
+  </center>
+  
+  <center>
+    <div class="collection">
+      <div class="coll">
+        <img src="https://raw.githubusercontent.com/8-TECH/8-TECH/main/2tech2.png" class="responsive" id="image">
+      </div>
+      
+      <div class="col">
+        <img src="https://raw.githubusercontent.com/8-TECH/8-TECH/main/2tech1.jpeg" class="responsive" id="image">
+      </div>
+    </div>
+  </center>
+  
+  <center>
+  <h3>CONTACT US</h3>
+    
+    <div class="contact">
+      
+      <a href="https://wa.me/+254113631232">
+          
+    <img src="https://raw.githubusercontent.com/8-TECH/8-TECH/main/Chat.png" class="responsive" id="image">
+      </a>
+ 
+      </div>
+  </center>
+  
+  <center>
+     <div class="social-media">
+  <a href="#"><i class="fab fa-twitter"></i></a>
+  <a href="#"><i class="fab fa-instagram"></i></a>
+  <a href="#"><i class="fab fa-whatsapp"></i></a>
+  <a href="#"><i class="fab fa-facebook"></i></a>
+  <a href="#"><i class="fas fa-envelope"></i></a>
+</div>
+  </center>       
+  <center> <h1>2TECH SOLUTIONS</h1> </center> 
+
+  <script>
+    function toggleMenu() {
+    var check = document.getElementById("check");
+    check.checked = !check.checked;
+  }
+  
+  document.addEventListener("DOMContentLoaded", function () {
+  showSlides(); // Initial display
+});
+
+var slideIndex = 0;
+var slideshowInterval;
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  slideIndex++;
+
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }
+
+  slides[slideIndex - 1].style.display = "block";
+  slideshowInterval = setTimeout(showSlides, 10000); // 10 seconds interval
+}
+
+function openBook() {
+  clearInterval(slideshowInterval); // Stop the automatic slideshow
+  changeSlide(1); // Show the next slide manually
+}
+
+function closeBook() {
+  slideshowInterval = setInterval(showSlides, 10000); // Restart the automatic slideshow
+}    
+
+  function changeImage() {
+			var img = document.getElementById("image");
+		  img.src = "https://raw.githubusercontent.com/8-TECH/8-TECH/main/Deadline.jpeg";
+		}
+  
+  
+  function changeImg() {
+			var img = document.getElementById("image");
+		  img.src = "https://raw.githubusercontent.com/8-TECH/8-TECH/main/Cat.jpeg";
+		}
+  
+  function changeIm() {
+			var img = document.getElementById("image");
+		  img.src = "https://raw.githubusercontent.com/8-TECH/8-TECH/main/Exam.jpeg";
+		}
+  
+  
+  function changeI() {
+			var img = document.getElementById("image");
+		  img.src = "https://raw.githubusercontent.com/8-TECH/8-TECH/main/Tuva.png";
+		}
+  
+  function changeIg() {
+			var img = document.getElementById("image");
+		  img.src = "https://raw.githubusercontent.com/8-TECH/8-TECH/main/Tuva.png";
+		}
+    
+    
+    
+    var items = [
+    { name: 'OPPO A96 COMPLETE LCD ORG Ksh.14,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO FIND X5 PRO COMPLETE LCD Ksh.30,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO RENO 7 5G COMPLETE LCD Ksh.5,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    ];
+
+  function searchItem() {
+    var searchInput = document.getElementById('searchInput');
+    var searchResults = document.getElementById('searchResults');
+    var notFoundMessage = document.getElementById('notFoundMessage');
+    var defaultImage = document.getElementById('defaultImage');
+
+    var searchTerm = searchInput.value.trim().toLowerCase();
+
+    if (searchTerm === '') {
+      notFoundMessage.innerText = 'Please enter a search term.';
+      searchResults.innerHTML = '';
+    } else {
+      var foundItems = items.filter(function (item) {
+        return item.name.toLowerCase().includes(searchTerm);
+      });
+
+      if (foundItems.length > 0) {
+        notFoundMessage.innerText = '';
+        searchResults.innerHTML = '';
+
+        foundItems.forEach(function (foundItem) {
+          var resultDiv = document.createElement('div');
+          resultDiv.className = 'search-result-item';
+
+          var resultImage = document.createElement('img');
+          resultImage.src = foundItem.image;
+          resultImage.alt = 'Item Image';
+          resultImage.className = 'result-image';
+
+          var resultText = document.createElement('p');
+          resultText.innerText = 'Found: ' + foundItem.name;
+
+          resultDiv.appendChild(resultImage);
+          resultDiv.appendChild(resultText);
+
+          searchResults.appendChild(resultDiv);
+        });
+      } else {
+        notFoundMessage.innerText = 'Item not found';
+        searchResults.innerHTML = '';
+      }
+    }
+  }
+
+  </script>
+
+<footer>
+  <p>&copy; 2024 2Tech Solutions. All rights reserved.</p>
+</footer>
+
+</body>
+  </html>
